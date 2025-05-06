@@ -9,10 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationStack{
-            Text("gfklnblofh")
-                .padding(100.0)
-        }
+            TabView {
+                home().tabItem{
+                    Text("home")
+                }
+                favorite().tabItem{
+                    Text("favorite")
+                }
+                search().tabItem{
+                    Text("favorite")
+                }
+
+            }
+    }
+}
+
+struct home: View {
+    var body: some View {
+        Text("home")
+    }
+}
+
+struct favorite: View {
+    var body: some View {
+        Text("fav")
+    }
+}
+
+struct search: View {
+    var body: some View {
+        Text("search")
     }
 }
 
