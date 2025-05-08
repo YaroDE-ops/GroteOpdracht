@@ -8,19 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    init() {
+    UITabBar.appearance().backgroundColor = Color.orange
+    }
+    
     var body: some View {
-            TabView {
-                home().tabItem{
-                    Text("home")
-                }
-                favorite().tabItem{
-                    Text("favorite")
-                }
-                search().tabItem{
-                    Text("favorite")
-                }
-
+        TabView {
+            home().tabItem{
+                Image(systemName: "house.fill")
+                Text("home")
             }
+            favorite().tabItem{
+                Image(systemName: "star.fill")
+                Text("favorite")
+            }
+            search().tabItem{
+                Image(systemName: "magnifyingglass")
+                Text("search")
+            }
+        }.background(Color.red.edgesIgnoringSafeArea(.all))
     }
 }
 
