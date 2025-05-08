@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    init() {
-    UITabBar.appearance().backgroundColor = Color.orange
-    }
     
     var body: some View {
         TabView {
@@ -26,7 +23,7 @@ struct ContentView: View {
                 Image(systemName: "magnifyingglass")
                 Text("search")
             }
-        }.background(Color.red.edgesIgnoringSafeArea(.all))
+        }.tint(.green)
     }
 }
 
